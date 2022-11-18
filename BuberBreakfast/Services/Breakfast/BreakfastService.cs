@@ -11,9 +11,17 @@ public class BreakfastService : IBreakfastService
 		_breakfast.Add(breakfast.Id, breakfast);
 	}
 
-	public Breakfast GetBreakfast(Guid id)
+	public Breakfast? GetBreakfast(Guid id)
 	{
-		return _breakfast[id];
+		// return _breakfast[id];
+		try
+		{
+			return _breakfast[id];
+		}
+		catch
+		{
+			return null;
+		}
 	}
 
 
@@ -23,16 +31,14 @@ public class BreakfastService : IBreakfastService
 	}
 
 
-	public void UpsertBreakfast(Guid id, Breakfast breakfast)
+	public void UpsertBreakfast(Breakfast breakfast)
 	{
-		if (_breakfast[id] != null)
-		{
-			_breakfast[id] = breakfast;
-		}
-		else
-		{
-			_breakfast.Add(id, breakfast);
-		}
+		_breakfast[breakfast.Id] = breakfast;
 
+	}
+
+	public Dictionary<Guid, Breakfast> GetAll()
+	{
+		return _breakfast;
 	}
 }

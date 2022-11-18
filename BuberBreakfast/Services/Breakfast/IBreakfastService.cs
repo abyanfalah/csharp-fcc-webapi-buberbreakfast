@@ -5,8 +5,9 @@ namespace BuberBreakfast.Service.Breakfasts;
 
 public interface IBreakfastService
 {
-	Breakfast GetBreakfast(Guid id);
+	Dictionary<Guid, Breakfast> GetAll();
+	Breakfast? GetBreakfast(Guid id);
 	void CreateBreakfast(Breakfast breakfast);
-	void UpsertBreakfast(Guid id, Breakfast breakfast);
+	void UpsertBreakfast(Breakfast breakfast);
 	void DeleteBreakfast(Guid id);
 }
