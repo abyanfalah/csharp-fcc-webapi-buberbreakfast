@@ -1,0 +1,18 @@
+POST http://localhost:5091/breakfasts
+Content-Type: application/json
+
+{
+	"name" : "Ketoprak",
+	"description" : "Betawi's top street food",
+	"startDateTime" : "2022-05-01T11:00:00",
+	"endDateTime" : "2022-05-01T12:00:00",
+	"savory" : [
+		"Oatmeal",
+		"Avocado Toast",
+		"Omlette",
+		"Salad"
+	],
+	"sweet" : [
+		"Cookie"
+	]
+}

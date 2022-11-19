@@ -1,0 +1,20 @@
+@id=0f0ee6f1-f27a-4b8d-84a8-60440e694633
+
+PUT http://localhost:5091/breakfasts/{{id}}
+Content-Type: application/json
+
+{
+	"name" : "Ketoprak",
+	"description" : "Betawi's top street food",
+	"startDateTime" : "2022-05-01T11:00:00",
+	"endDateTime" : "2022-05-01T11:00:00",
+	"savory" : [
+		"Oatmeal",
+		"Avocado Toast",
+		"Omlette",
+		"Salad"
+	],
+	"sweet" : [
+		"Cookie"
+	]
+}

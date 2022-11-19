@@ -22,7 +22,7 @@ public class Breakfast
 		List<string> sweet)
 	{
 
-		// maybe some validations here
+		// some validations here
 
 		Id = id;
 		Name = name;

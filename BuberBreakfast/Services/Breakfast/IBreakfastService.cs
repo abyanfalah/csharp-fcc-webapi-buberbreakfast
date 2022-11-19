@@ -1,7 +1,7 @@
-using BuberBreakfast.Contracts.Breakfasts;
+using BuberBreakfast.Contracts;
 using BuberBreakfast.Models;
 
-namespace BuberBreakfast.Service.Breakfasts;
+namespace BuberBreakfast.Service;
 
 public interface IBreakfastService
 {

@@ -1,7 +1,6 @@
 
 using BuberBreakfast.Models;
-using BuberBreakfast.Service.Breakfasts;
-namespace BuberBreakfast.Service.Breakfasts;
+namespace BuberBreakfast.Service;
 
 public class BreakfastService : IBreakfastService
 {

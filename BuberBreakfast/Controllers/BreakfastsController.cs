@@ -1,7 +1,7 @@
 using System.Security.AccessControl;
-using BuberBreakfast.Contracts.Breakfasts;
+using BuberBreakfast.Contracts;
 using BuberBreakfast.Models;
-using BuberBreakfast.Service.Breakfasts;
+using BuberBreakfast.Service;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BuberBreakfast.Controllers;
