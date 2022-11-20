@@ -2,7 +2,7 @@ namespace BuberBreakfast.Models;
 
 public class User
 {
-	public Guid Id { get; }
+	public Guid Id { get; set; }
 	public string Name { get; }
 	public string Job { get; }
 	public int Age { get; }

@@ -19,13 +19,20 @@ public class UserController : ControllerBase
 	}
 
 	[HttpGet]
-	public Dictionary<Guid, User>? GetAllUser() => _userService.GetAll();
+	public ActionResult<List<User>> GetAll() => _userService.GetAll();
+
 
 	[HttpGet("{id:guid}")]
-	public User? GetUser(Guid id) => _userService.GetUser(id);
+	public ActionResult<User> GetUser(Guid id)
+	{
+		var user = _userService.GetUser(id);
+		if (user == null)
+			return NotFound();
+
+		return user;
+	}
 
 	[HttpPost]
-
 	public IActionResult CreateUser(CreateUserRequest request)
 	{
 		var user = new User(
@@ -67,14 +74,16 @@ public class UserController : ControllerBase
 	}
 
 	[HttpPut("{id:guid}")]
-	public IActionResult UpdateUser(Guid id, User user)
+	public Object UpdateUser(Guid id, User user)
 	{
 		var u = _userService.GetUser(id);
 		if (u == null)
 			return NotFound();
 
+		user.Id = id;
 		_userService.UpdateUser(user);
 		return NoContent();
+
 	}
 
 }
